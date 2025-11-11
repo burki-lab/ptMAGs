@@ -7,8 +7,8 @@
 #SBATCH --mail-user mahwash.jamy@slu.se
 #SBATCH --mail-type=FAIL
 #SBATCH -J job_IQTREE
-#SBATCH -o /crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/uppmax_scripts/out_bin/slurm-%A.out
-#SBATCH -e /crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/uppmax_scripts/out_bin/slurm-%A.err
+#SBATCH -o /crex/proj/naiss2023-6-81/Mahwash/ptMAGs/uppmax_scripts/out_bin/slurm-%A.out
+#SBATCH -e /crex/proj/naiss2023-6-81/Mahwash/ptMAGs/uppmax_scripts/out_bin/slurm-%A.err
 
 # modules
 module load bioinfo-tools
@@ -28,8 +28,6 @@ module load iqtree/2.2.2.6-omp-mpi
 
 ## For concatenated tree with subset of the data
 ##iqtree2 -s $1 --prefix $2 -B 1000 -T 16 -bnni -mset LG,cpREV -madd LG+C60,LG+C60+G,cpREV+C60,cpREV+C60+G
-### The command above did not test the C60 models, so we tried with with iqtree v1
-##iqtree-omp -s $1 -pre $2 -bb 1000 -nt 16 -bnni -m TEST -mset LG,cpREV -madd LG+C60,LG+C60+G,cpREV+C60,cpREV+C60+G
 
 ## cpREV+C60+G
 ##iqtree2 -s $1 --prefix $2 -B 1000 -T 16 -bnni -m cpREV+C60+G -mwopt
@@ -40,26 +38,11 @@ iqtree2 -s $1 --prefix $2 -B 1000 -T 16 -bnni -m LG+C60+G -mwopt
 ## Model test only
 ##iqtree-omp -s $1 -pre $2 -bb 1000 -nt 8 -bnni -m TESTONLY -mset LG,cpREV -madd LG+C60,LG+C60+G,cpREV+C60,cpREV+C60+G
 
-## EX_EHO + G4
-##iqtree2 -s $1 --prefix $2 -B 1000 -T 16 -bnni -m EX_EHO+G4
-
 ## cpREV+C60+G+F
 ##iqtree2 -s $1 --prefix $2 -B 1000 -T 16 -bnni -m cpREV+C60+G+F
 
-## Poisson+C60+G
-##iqtree2 -s $1 --prefix $2 -B 1000 -T 16 -bnni -m Poisson+C60+G
-
 ## cpREV+C60+R9
 ##iqtree2 -s $1 --prefix $2 -B 1000 -T 16 -bnni -m cpREV+C60+R9
-
-## model test cpREV+MAM60+G vs cpREV+C60+G
-##iqtree-omp -s $1 -pre $2 -nt 16 -m TESTONLY -mdef $3 -mset LG,WAG,cpREV -madd cpREV+C60+G,cpREV+ESmodel+G,LG+C60+G,LG+ESmodel+G,WAG+C60+G,WAG+ESmodel+G -mwopt
-
-## cpREV+MAM60+G model
-##iqtree2 -s $1 --prefix $2 -B 1000 -T 16 -bnni -m cpREV+ESmodel+G -mdef $3 
-
-## LG+MAM60+G model
-##iqtree2 -s $1 --prefix $2 -B 1000 -T 16 -bnni -m LG+ESmodel+G -mdef $3 
 
 ## LG+MEOW(60,20)+G model
 ##iqtree2 -s $1 --prefix $2 -B 1000 -T 16 -bnni -m LG+MEOW60+G -mdef $3 -mwopt 
@@ -91,10 +74,4 @@ iqtree2 -s $1 --prefix $2 -B 1000 -T 16 -bnni -m LG+C60+G -mwopt
 ## CHOOSING THE BEST MEOW MODEL 
 ## BIC CRITERIA
 ##iqtree-omp -s $1 -pre $2 -nt 16 -m TESTONLY -mdef $3 -mset LG,cpREV -madd cpREV+MEOW40+G,cpREV+MEOW60+G,cpREV+MEOW80+G,LG+MEOW40+G,LG+MEOW60+G,LG+MEOW80+G -mwopt
-
-
-## 2-FOLD CORRECTED CROSS VALIDATION
-### Calculate maximized log-likelihood for the whole alignment, X and tree, T and adjustable parameters, theta.
-##iqtree2 -s $1 --prefix $2 -T 16 -m cpREV+ESmodel+G -mdef $3 -mwopt
-
 

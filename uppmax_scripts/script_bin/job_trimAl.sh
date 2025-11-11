@@ -7,8 +7,8 @@
 #SBATCH --mail-user mahwash.jamy@slu.se
 #SBATCH --mail-type=NONE
 #SBATCH -J job_trimAl
-#SBATCH -o /crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/uppmax_scripts/out_bin/slurm-%A.out
-#SBATCH -e /crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/uppmax_scripts/out_bin/slurm-%A.err
+#SBATCH -o /crex/proj/naiss2023-6-81/Mahwash/ptMAGs/uppmax_scripts/out_bin/slurm-%A.out
+#SBATCH -e /crex/proj/naiss2023-6-81/Mahwash/ptMAGs/uppmax_scripts/out_bin/slurm-%A.err
 
 # modules
 module load bioinfo-tools
@@ -21,5 +21,5 @@ module load trimAl
 ## command for mags plus references - SGTs
 /sw/bioinfo/trimAl/1.4.1/rackham/trimal -in $1 -out $2 -gt 0.1 -fasta
 
-## command for mags plus references - concatenated phylogeny
+## command for MAGs plus references - concatenated phylogeny
 #/sw/bioinfo/trimAl/1.4.1/rackham/trimal -in $1 -out $2 -gt 0.2 -fasta
