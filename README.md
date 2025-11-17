@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1091757605.svg)](https://doi.org/10.5281/zenodo.17634564)
+
 # ptMAGs
 Code associated with the manuscript "Identification of a deep-branching lineage of algae using environmental plastid genomes" (Jamy et al 2025).
 
