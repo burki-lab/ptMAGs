@@ -1,0 +1,202 @@
+---
+title: "Mitochondrial contigs abundance correlation"
+output: html_document
+date: "2025-06-06"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+## load libraries
+library("dplyr")
+library("data.table")
+library("ggplot2")
+library("ggpmisc")
+```
+
+### Read in data
+
+We read in the mitochondrial contigs coverage data. 
+
+```{r}
+## read data
+mito_data_long <- readxl::read_excel("../data/filtered_bilan.TO-TOPC.metaG.95.mitochondrias.genome.size.sample.mappedreads.coveredbases.covx-0.25-cutoff.mappedbases.covy.xlsx")
+
+## replace NAs with 0
+mito_data_long <- mito_data_long %>% replace(is.na(.), 0)
+
+## keep relevant columns only
+mito_data_long <- mito_data_long %>% select(genome, filter, covy)
+
+## read file with size fraction info
+sizefraction <- readxl::read_excel("../data/filters_sizefraction.xlsx")
+
+## add size fraction information
+mito_data_long <- merge(mito_data_long, sizefraction[, c("Filter_ID", "Filter_Size")],
+                   by.x = "filter", by.y = "Filter_ID", all.x = TRUE)
+```
+
+Now we read in the Lepto_01 coverage data (found in Supplementary Table 1). 
+
+```{r}
+lepto01 <- readxl::read_excel("../data/Lepto-01.coverage.xlsx")
+
+## merge the dataframes
+df <- merge(lepto01, mito_data_long, by = "filter")
+
+## remove filters where no reads are mapped for lepto_01 or the mito-genome.
+df <- df[!(df$Lepto_01 + df$covy == 0), ]
+```
+
+
+### Plot scatterplots
+
+```{r}
+## Scatter plots
+ggplot(df, aes(x = Lepto_01, y = covy)) +
+  geom_point(alpha = 0.7) +
+  facet_wrap(~ genome, scales = "free_y") +
+  theme_minimal() +
+  labs(x = "Lepto_01 coverage", y = "Mito genome coverage", title = "Scatterplots of Lepto_01 vs Mito contigs coverage")
+
+## Scatter plots with trend line, confidence intervals and R^2 value
+ggplot(df, aes(x = Lepto_01, y = covy)) +
+  stat_poly_line(color = "red") +
+  stat_poly_eq() +
+  geom_point() +
+  facet_wrap(~ genome, scales = "free_y") +
+  theme_minimal() +
+  labs(x = "Lepto_01 coverage", y = "Mito genome coverage", title = "Scatterplots of Lepto_01 vs Mito contigs coverage")
+
+```
+
+### Size fraction 0.22-3 microns
+
+```{r}
+## filter
+df_size01 <- df %>% filter(Filter_Size == "0.22-3µm")
+
+## Preliminary tests showed that the chloroplast is more abundant than mitochondria - so we filter out samples where the abundance of lepto_01 is zero.
+df_size01 <- df_size01 %>% filter(Lepto_01 > 0)
+
+## Scatter plots with trend line, confidence intervals and R^2 value
+ggplot(df_size01, aes(x = Lepto_01, y = covy)) +
+  stat_poly_line(color = "red") +
+  stat_poly_eq() +
+  geom_point() +
+  facet_wrap(~ genome, scales = "free_y") +
+  theme_minimal() +
+  labs(x = "Lepto_01 coverage", y = "Mito genome coverage", title = "Scatterplots of Lepto_01 vs Mito contigs coverage (size fraction 0.22-3µm)")
+```
+### Size fraction 3-20 microns
+
+```{r}
+## filter
+df_size03 <- df %>% filter(Filter_Size == "3-20µm")
+
+## Preliminary tests showed that the chloroplast is more abundant than mitochondria - so we filter out samples where the abundance of lepto_01 is zero.
+df_size03 <- df_size03 %>% filter(Lepto_01 > 0)
+
+## Scatter plots with trend line, confidence intervals and R^2 value
+ggplot(df_size03, aes(x = Lepto_01, y = covy)) +
+  stat_poly_line(color = "red") +
+  stat_poly_eq() +
+  geom_point() +
+  facet_wrap(~ genome, scales = "free_y") +
+  theme_minimal() +
+  labs(x = "Lepto_01 coverage", y = "Mito genome coverage", title = "Scatterplots of Lepto_01 vs Mito contigs coverage (size fraction 3-20µm)")
+```
+
+
+### Size fraction 0.8-2000 microns
+
+```{r}
+## filter
+df_sizeall <- df %>% filter(Filter_Size == "0.8-2000µm")
+
+## Preliminary tests showed that the chloroplast is more abundant than mitochondria - so we filter out samples where the abundance of lepto_01 is zero.
+df_sizeall <- df_sizeall %>% filter(Lepto_01 > 0)
+
+## Scatter plots with trend line, confidence intervals and R^2 value
+ggplot(df_sizeall, aes(x = Lepto_01, y = covy)) +
+  stat_poly_line(color = "red") +
+  stat_poly_eq() +
+  geom_point() +
+  facet_wrap(~ genome, scales = "free_y") +
+  theme_minimal() +
+  labs(x = "Lepto_01 coverage", y = "Mito genome coverage", title = "Scatterplots of Lepto_01 vs Mito contigs coverage (size fraction 0.8-2000µm)")
+```
+
+## c_000000367234
+
+Altogether, we can say that c_000000367234 is the mito contig that best correlates with the abundance of Lepto_01. So we plot it separately. I decided to use unfiltered data as Tom prefers using this for correlation data. 
+
+Read in mito data first. 
+
+```{r}
+## read data
+mito_data_long <- readxl::read_excel("../data/filtered_bilan.TO-TOPC.metaG.95.mitochondrias.genome.size.sample.mappedreads.coveredbases.covx.mappedbases.covy.xlsx")
+
+## replace NAs with 0
+mito_data_long <- mito_data_long %>% replace(is.na(.), 0)
+
+## keep relevant columns only
+mito_data_long <- mito_data_long %>% select(genome, filter, covy)
+
+## keep c_000000367234 only
+mito_data_long <- mito_data_long %>% filter(genome == "c_000000367234")
+
+## read file with size fraction info
+sizefraction <- readxl::read_excel("filters_sizefraction.xlsx")
+
+## add size fraction information
+mito_data_long <- merge(mito_data_long, sizefraction[, c("Filter_ID", "Filter_Size")],
+                   by.x = "filter", by.y = "Filter_ID", all.x = TRUE)
+```
+
+
+Now we read in the REFM coverage data (shared separately by Tom without any cutoff). Includes both Lepto-01 and the Zhan-22 contig. 
+
+```{r}
+refm <- readxl::read_excel(../data/bilan.genome.size.sample.totalReads.mappedReads.fractionReadsCaptured.coveredBases.covx.mappedBases.covy.notnull.REFM.xlsx")
+
+## keep relevant columns only
+refm <- refm %>% select(genome, sample, covy)
+
+## change column names
+colnames(refm) <- c('genome','filter','covy')
+
+## change to wide format to enable merging dataframes
+refm_wide <- refm %>% pivot_wider(names_from = genome, values_from = covy)
+
+## replace NAs with 0
+refm_wide <- refm_wide %>% replace(is.na(.), 0)
+
+## merge the dataframes
+df <- merge(refm_wide, mito_data_long, by = "filter")
+```
+
+
+### Size fraction 0.22-3 microns
+
+```{r}
+## filter
+df_size01 <- df %>% filter(Filter_Size == "0.22-3µm")
+
+## Preliminary tests showed that the chloroplast is more abundant than mitochondria - so we filter out samples where the abundance of lepto_01 is zero.
+df_size01 <- df_size01 %>% filter(Lepto_01 > 0)
+
+## Scatter plots with trend line, confidence intervals and R^2 value
+ggplot(df_size01, aes(x = REFM_CHLORO_00001, y = covy)) +
+  stat_poly_line(color = "#e22e34") +
+  stat_poly_eq(aes(label = paste(..rr.label.., ..p.value.label.., sep = "*`,`~"))) +
+  geom_point(size = 3, stroke = 1, color = "#e22e34", fill = "#e22e34", alpha = 0.7) +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  labs(x = "Lepto_01 coverage", y = "c_000000367234 coverage", title = "Abundance correlation")
+```
+
+
+
