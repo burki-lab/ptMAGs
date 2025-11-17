@@ -1,0 +1,307 @@
+{
+	"ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs",
+	"DATABASES": {
+		"TARA_PLASTID_GENOMES": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/data/CHL_MAGs",
+        "CORE_GENES": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/data/core_genes.list",
+        "MF_ANNOT_REFS": {
+            "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/data/MFannot_data",
+            "PROTEINS": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/data/MFannot_data/protein_collections"
+        },
+        "GENE_LISTS": {
+                "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/data/gene_lists",
+                "JANO_FULL": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/data/gene_lists/full_dataset_jano2010.txt",
+                "JANO_CONS": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/data/gene_lists/subset_jano2010.txt",
+                "GENES_ADD": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/data/gene_lists/gene_list_to_add.txt",
+                "GENES_93": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/data/gene_lists/gene_list_93.txt"
+            },
+        "18S_SEQS" : "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/data/18S_sequences",
+        "PSBO": {
+            "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/data/psbO",
+            "ARCTIC": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/data/arctic_metagenomic_assemblies"
+        },
+        "COASSEMBLY": { 
+            "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/data",
+            "PR2" : "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/data/pr2",
+            "MITO": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/data/mitochondria"
+        }
+    },
+    "ANALYSIS_DATA": {
+        "ROOT": "None",
+        "REFERENCE_ORGANIZATION": {
+            "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/results/ref_plastomes",
+            "LIST": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/results/ref_plastomes/references.list",
+            "CSV": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/results/ref_plastomes/2023_10_11_references_meta.csv",
+            "TAXONOMY": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/results/ref_plastomes/references_taxo.tsv",
+            "GENBANK_FILES": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/results/ref_plastomes/genbank",
+            "FASTA_FILES": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/results/ref_plastomes/fasta",
+            "PROTEOMES": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/results/ref_plastomes/proteomes",
+            "MF_ANNOT_REFS": {
+                "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/results/ref_plastomes/mfannot",
+                "SLURMLOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/results/ref_plastomes/mfannot/mfannot_ref_slurmlog.csv",
+                "SLURMLOG_GB": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/results/ref_plastomes/mfannot/gb_ref_slurmlog.csv"
+            }
+        },
+        "PLASTOMES": {
+            "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/results",
+            "MFANNOTATIONS": {
+                "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/results/mfannot/",
+                "MASTERFILE": {
+                    "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/results/mfannot/masterfile",
+                    "SLURMLOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/results/mfannot/masterfile/2023_10_mfannot_slurmlog.csv"
+                },
+                "GENBANK": {
+                    "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/results/mfannot/genbank",
+                    "SLURMLOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/results/mfannot/genbank/2023_10_sqn_slurmlog.csv"
+                },
+                "PROTEOMES": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/results/mfannot/proteomes"
+            },
+            "STATS": {
+                "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/00_plastid_MAGS/results/stats"
+            }
+        },
+        "SAMPLE_SETS": {
+            "ROOT": "/crex/proj/snic2022-23-321/private/thomas/island_in_the_sun/data/sample_sets"
+        },
+        "16S_GENE": {
+            "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/16S_phylogeny",
+            "DATASET": {
+                "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/16S_phylogeny/dataset",
+                "MAGS": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/16S_phylogeny/dataset/MAGs",
+                "REFS": {
+                    "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/16S_phylogeny/dataset/refs",
+                    "FASTA": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/16S_phylogeny/dataset/refs/fasta_dir"
+                    }
+                },
+            "ALIGNMENTS": {
+                "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/16S_phylogeny/alignments",
+                "V4": {
+                    "MAFFT": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/01_phylogenies/results/16S_phylogeny/alignments/v4/mafft",
+                    "TRIMAL": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/01_phylogenies/results/16S_phylogeny/alignments/v4/trimal"
+                    }
+                },
+            "TREES": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/01_phylogenies/results/16S_phylogeny/trees"
+        },
+        "18S_GENE": {
+            "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/01_phylogenies/results/18S_phylogeny",
+            "DATASET": {
+                "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/01_phylogenies/results/18S_phylogeny/dataset",
+                "V1": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/01_phylogenies/results/18S_phylogeny/dataset/v1",
+                "V2": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/01_phylogenies/results/18S_phylogeny/dataset/v2",
+                "V3": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/01_phylogenies/results/18S_phylogeny/dataset/v3"
+            },
+            "ALIGNMENTS": {
+                "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/01_phylogenies/results/18S_phylogeny/alignments",
+                "V1": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/01_phylogenies/results/18S_phylogeny/alignments/v1",
+                "V2": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/01_phylogenies/results/18S_phylogeny/alignments/v2",
+                "V3": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/01_phylogenies/results/18S_phylogeny/alignments/v3"
+            },
+            "TREES": {
+                "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/01_phylogenies/results/18S_phylogeny/trees",
+                "V1": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/01_phylogenies/results/18S_phylogeny/trees/v1",
+                "V2": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/01_phylogenies/results/18S_phylogeny/trees/v2",
+                "V3": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/01_phylogenies/results/18S_phylogeny/trees/v3"
+            }
+        },
+        "RPL36": {
+            "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/rpl36",
+            "DATASET": {
+                "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/rpl36/dataset",
+                "REFS": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/rpl36/dataset/refs",
+                "MAGS": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/rpl36/dataset/mags"
+            },
+            "ALIGNMENTS": {
+                "ALIGNED": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/rpl36/alignments/aligned",
+                "TRIMMED": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/rpl36/alignments/trimmed"
+            },
+            "TREES": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/rpl36/trees"
+        },
+        "SINGLE_GENE_ANALYSIS": {
+            "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies",
+            "PROTEOMES": {
+                "REF_PROTEOMES": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/data/proteomes/ref_proteomes",
+                "MAG_PROTEOMES": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/data/proteomes/MAG_proteomes"
+                },
+            "DATASET": {
+                "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/dataset",
+                "REF": {
+                    "FINAL": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/dataset/ref/final",
+                    "WORKING": {
+                        "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/dataset/ref/working_dataset",
+                        "REF": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/dataset/ref/working_dataset/ref",
+                        "TOADD": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/dataset/ref/working_dataset/toAdd" 
+                        }
+                    },
+                "REF_MAGS": {
+                    "FINAL": {
+                        "PARALOGS": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/dataset/ref_plus_MAGs/final/paralogs",
+                        "CLEAN": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/dataset/ref_plus_MAGs/final/clean"
+                        },
+                    "WORKING": {
+                        "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/dataset/ref_plus_MAGs/working_dataset",
+                        "REF": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/dataset/ref_plus_MAGs/working_dataset/ref",
+                        "TOADD": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/dataset/ref_plus_MAGs/working_dataset/toAdd"
+                        }
+                    }
+                },
+            "ALIGNMENTS": {
+                "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/alignments",
+                "PRELIM_REF": {
+                    "MAFFT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/alignments/prelim_ref/mafft",
+                    "MAFFTLOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/alignments/prelim_ref/mafft/slurmlog.csv",
+                    "TRIMAL": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/alignments/prelim_ref/trimal",
+                    "TRIMALLOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/alignments/prelim_ref/trimal/slurmlog.csv"
+                },
+                "REF_MAGS": {
+                    "MAFFT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/alignments/ref_plus_MAGs/mafft",
+                    "MAFFTLOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/alignments/ref_plus_MAGs/mafft/slurmlog.csv",
+                    "TRIMAL": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/alignments/ref_plus_MAGs/trimal",
+                    "TRIMALLOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/alignments/ref_plus_MAGs/trimal/slurmlog.csv"
+                }
+            },
+            "TREES": {
+                "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/trees",
+                "PRELIM_REF": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/trees/prelim_ref",
+                "REF_MAGS": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/trees/ref_plus_MAGs",
+                "TREESLOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/single_genes/trees/ref_plus_MAGs/slurmlog.csv"
+            }
+        },
+        "CONCAT_GENE_ANALYSIS": {
+            "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat",
+            "FULL": {
+                "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/full",
+                "DATASET": {
+                    "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/full/dataset",
+                    "V3": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/full/dataset/v3"
+                },
+                "ALIGNMENTS": {
+                    "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/full/alignments",
+                    "V3": {
+                        "PREQUAL": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/full/alignments/v3/prequal",
+                        "MAFFT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/full/alignments/v3/mafft",
+                        "MAFFTLOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/full/alignments/v3/mafft/slurmlog.csv",
+                        "BMGE": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/full/alignments/v3/bmge",
+                        "BMGELOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/full/alignments/v3/bmge/slurmlog.csv",
+                        "CONCAT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/full/alignments/v3/concat"
+                    }
+                },
+                "TREES": {
+                    "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/full/trees",
+                    "V3": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/full/trees/v3"
+                }
+            },
+            "SUBSET": {
+                "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/subset",
+                "DATASET": {
+                    "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/subset/dataset",
+                    "V14": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/subset/dataset/v14"
+                },
+                "ALIGNMENTS": {
+                    "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/subset/alignments",
+                    "V14": {
+                        "PREQUAL": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/subset/alignments/v14/prequal",
+                        "MAFFT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/subset/alignments/v14/mafft",
+                        "MAFFTLOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/subset/alignments/v14/mafft/slurmlog.csv",
+                        "BMGE": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/subset/alignments/v14/bmge",
+                        "BMGELOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/subset/alignments/v14/bmge/slurmlog.csv",
+                        "CONCAT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/subset/alignments/v14/concat"
+                    }
+                },
+                "TREES": {
+                    "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/subset/trees",
+                    "V14": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/01_phylogenies/results/concat/subset/trees/v14"
+                }
+            }
+        },
+        "COMP_GEN": {
+            "SYNTENY": {
+                "LEPTO_SYNTENY": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/03_comp_genomics/results/synteny/lepto_synteny"
+            },
+            "GENE_CONTENT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/03_comp_genomics/results/gene_content"
+        },
+        "PSBO": {
+            "ABUNDANT_PSBO": {
+                "DATA": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/abundant_psbO/data",
+                "ALIGNMENTS": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/abundant_psbO/alignments",
+                "TREES": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/abundant_psbO/trees"
+            },
+            "ARCTIC": {
+                "CANDIDATES": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/arctic_search/candidates",
+                "PHYLOGENY": {
+                    "DATA": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/arctic_search/phylogeny/data",
+                    "ALIGNMENTS": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/arctic_search/phylogeny/alignment",
+                    "TREES": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/arctic_search/phylogeny/trees"
+                }
+            }
+        },
+        "COASSEMBLY": {
+            "METASPADES": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/metaspades", 
+            "BBNORM_METASPADES": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/bbnorm_metaspades",
+            "METASPADES_TWO": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/metaspades_two",
+            "MEGAHIT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/megahit",
+            "MITO": {
+                "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria",
+                "MFANNOT": {
+                    "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/mfannot",
+                    "MASTERFILE": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/mfannot/masterfile",
+                    "MFSLURMLOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/mfannot/masterfile/mfannot_slurmlog.csv",
+                    "GENBANK": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/mfannot/genbank",
+                    "GBSLURMLOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/mfannot/genbank/mfannot_slurmlog.csv",
+                    "PROTEOMES": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/mfannot/proteomes"
+                },
+                "REFS": {
+                    "ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/refs",
+                    "FASTA": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/refs/fasta",
+                    "MFANNOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/refs/mfannot",
+                    "MFSLURMLOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/refs/mfannot/mfannot_slurmlog.csv",
+                    "GBSLURMLOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/refs/mfannot/gb_slurmlog.csv"
+                },
+                "TREES": {
+                    "DATASET": {
+                        "WORKING": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/single_gene_trees/dataset/working_dataset",
+                        "TO_ADD": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/single_gene_trees/dataset/working_dataset/toAdd",
+                        "MITOGENES": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/single_gene_trees/dataset/gene.list",
+                        "SUBMITOGENES": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/single_gene_trees/dataset/gene_subset.list",
+                        "CLEAN": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/single_gene_trees/dataset/clean"
+                    },
+                    "MAFFT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/single_gene_trees/mafft",
+                    "MAFFTLOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/single_gene_trees/mafft/slurmlog.csv",
+                    "TRIMAL": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/single_gene_trees/trimal",
+                    "TRIMALLOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/single_gene_trees/trimal/slurmlog.csv",
+                    "SGTS": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/single_gene_trees/trees",
+                    "SGTLOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/single_gene_trees/trees/slurmlog.csv"
+                },
+                "CONCAT": {
+                    "ALIGNMENTS": {
+                        "PRELIM": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/concat/alignment/prelim",
+                        "DATASET": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/concat/alignment/dataset",
+                        "MAFFT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/concat/alignment/mafft",
+                        "MAFFTLOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/concat/alignment/mafft/slurmlog.csv",
+                        "TRIMAL": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/concat/alignment/trimal",
+                        "TRIMALLOG": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/concat/alignment/trimal/slurmlog.csv",
+                        "CONCAT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/concat/alignment/concat"
+                    },
+                    "TREE": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/04_search_lepto_host/results/mitochondria/concat/tree"
+                }
+            }
+        }
+    },
+	"UPPMAX": {
+		"ROOT": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/uppmax_scripts",
+		"SCRIPTS_BASICS": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/uppmax_scripts/SCRIPT_BASICS.json",
+        "LOG_DIR": "/crex/proj/naiss2023-6-81/Mahwash/ptMAGs/uppmax_scripts/out_bin"
+	},
+	"SOFTWARES": {
+		"BLASTP": "/sw/bioinfo/blast/2.11.0+/rackham/bin/blastp",
+		"BLASTN": "/sw/bioinfo/blast/2.11.0+/rackham/bin/blastn",
+        "BLASTDBCMD": "/sw/bioinfo/blast/2.11.0+/rackham/bin/blastdbcmd",
+        "MAFFT": "/sw/apps/bioinfo/MAFFT/7.407/rackham/bin/mafft",
+        "TRIMAL": "/sw/bioinfo/trimAl/1.4.1/rackham/trimal",
+        "RAXML_NG": "/sw/bioinfo/RAxML-NG/1.1.0/rackham/bin/raxml-ng",
+        "IQ_TREE": "/sw/apps/bioinfo/iqtree/1.6.5-omp-mpi/rackham/bin/iqtree",
+        "DIVVIER": "/crex/proj/naiss2023-6-81/conda/envs/ptMAGs/bin/divvier",
+        "BMGE": "/crex/proj/naiss2023-6-81/conda/envs/ptMAGs/bin/bmge",
+        "MFANNOT": "singularity run /crex/proj/naiss2023-6-81/Thomas/data/analysis_plastomes/mfannot/mfannot_latest.sif /mfannot/mfannot",
+        "ASN2GB": "/crex/proj/naiss2023-6-81/bin/asn2gb", 
+        "ANY2FASTA": "/crex/proj/naiss2023-6-81/bin/any2fasta"
+    }
+}

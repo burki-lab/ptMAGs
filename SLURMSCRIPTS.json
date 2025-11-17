@@ -1,0 +1,8 @@
+{
+    "MAFFT_SINGLE_GENE": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/uppmax_scripts/script_bin/job_MAFFT.sh",
+    "TRIMAL_SINGLE_GENE_GAPFRACTION": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/uppmax_scripts/script_bin/job_trimAl.sh",
+    "IQ_TREE_SINGLE_GENE": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/uppmax_scripts/script_bin/job_iqtree.sh",
+    "MFANNOT_SINGLE_GENE": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/uppmax_scripts/script_bin/job_mfannot.sh",
+    "ASN_2_GB": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/uppmax_scripts/script_bin/job_asn2gb.sh",
+    "BMGE_SINGLE_GENE": "/crex/proj/naiss2023-6-81/Mahwash/beta-Cyclocitral/uppmax_scripts/script_bin/job_bmge.sh"
+}
